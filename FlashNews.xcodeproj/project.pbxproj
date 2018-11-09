@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6ECD7940BF28FDA5994B97E9 /* Pods_FlashNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC8F4AE816B98034AA5F18E /* Pods_FlashNews.framework */; };
+		A5819AF32195782D0010AC49 /* FNServiceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5819AF22195782D0010AC49 /* FNServiceURL.swift */; };
+		A5819AF521957C7F0010AC49 /* FNServiceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5819AF421957C7F0010AC49 /* FNServiceWrapper.swift */; };
+		A5819AF9219585A70010AC49 /* NetworkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5819AF8219585A70010AC49 /* NetworkCheck.swift */; };
 		A5FC18CE2195546500CBAE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC18CD2195546500CBAE33 /* AppDelegate.swift */; };
 		A5FC18D02195546500CBAE33 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC18CF2195546500CBAE33 /* ViewController.swift */; };
 		A5FC18D32195546500CBAE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FC18D12195546500CBAE33 /* Main.storyboard */; };
@@ -33,6 +36,9 @@
 		3B74D273B2731DC77BB27ECE /* Pods-FlashNewsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashNewsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlashNewsTests/Pods-FlashNewsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66697FD8F70F88A5EA5B12B6 /* Pods-FlashNewsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashNewsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashNewsTests/Pods-FlashNewsTests.release.xcconfig"; sourceTree = "<group>"; };
 		9AC8F4AE816B98034AA5F18E /* Pods_FlashNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5819AF22195782D0010AC49 /* FNServiceURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNServiceURL.swift; sourceTree = "<group>"; };
+		A5819AF421957C7F0010AC49 /* FNServiceWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNServiceWrapper.swift; sourceTree = "<group>"; };
+		A5819AF8219585A70010AC49 /* NetworkCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCheck.swift; sourceTree = "<group>"; };
 		A5FC18CA2195546500CBAE33 /* FlashNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FC18CD2195546500CBAE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5FC18CF2195546500CBAE33 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +74,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5819AED219577270010AC49 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC18D62195546800CBAE33 /* LaunchScreen.storyboard */,
+				A5FC18D12195546500CBAE33 /* Main.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A5819AEE219577960010AC49 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				A5819AF1219577EF0010AC49 /* Requestoperations */,
+				A5819AEF219577A00010AC49 /* List */,
+				A5819AF0219577B20010AC49 /* Detail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A5819AEF219577A00010AC49 /* List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		A5819AF0219577B20010AC49 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		A5819AF1219577EF0010AC49 /* Requestoperations */ = {
+			isa = PBXGroup;
+			children = (
+				A5819AF22195782D0010AC49 /* FNServiceURL.swift */,
+				A5819AF421957C7F0010AC49 /* FNServiceWrapper.swift */,
+			);
+			path = Requestoperations;
+			sourceTree = "<group>";
+		};
+		A5819AF72195856A0010AC49 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				A5819AF8219585A70010AC49 /* NetworkCheck.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		A5FC18C12195546500CBAE33 = {
 			isa = PBXGroup;
 			children = (
@@ -91,11 +147,12 @@
 		A5FC18CC2195546500CBAE33 /* FlashNews */ = {
 			isa = PBXGroup;
 			children = (
-				A5FC18ED21955B7700CBAE33 /* Splash */,
+				A5819AEE219577960010AC49 /* Modules */,
 				A5FC18CD2195546500CBAE33 /* AppDelegate.swift */,
-				A5FC18D12195546500CBAE33 /* Main.storyboard */,
+				A5FC18ED21955B7700CBAE33 /* Splash */,
+				A5819AF72195856A0010AC49 /* Utility */,
+				A5819AED219577270010AC49 /* Resource */,
 				A5FC18D42195546800CBAE33 /* Assets.xcassets */,
-				A5FC18D62195546800CBAE33 /* LaunchScreen.storyboard */,
 				A5FC18D92195546800CBAE33 /* Info.plist */,
 			);
 			path = FlashNews;
@@ -267,15 +324,15 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-FlashNews/Pods-FlashNews-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cedar/Cedar.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cedar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -307,8 +364,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5819AF521957C7F0010AC49 /* FNServiceWrapper.swift in Sources */,
+				A5819AF9219585A70010AC49 /* NetworkCheck.swift in Sources */,
 				A5FC18D02195546500CBAE33 /* ViewController.swift in Sources */,
 				A5FC18CE2195546500CBAE33 /* AppDelegate.swift in Sources */,
+				A5819AF32195782D0010AC49 /* FNServiceURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

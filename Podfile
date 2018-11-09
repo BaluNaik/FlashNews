@@ -7,7 +7,7 @@ target 'FlashNews' do
 
   # Pods for FlashNews
 	pod 'Alamofire', '~> 4.7'
-	pod 'MBProgressHUD', '~> 1.1.0'
+	pod 'SVProgressHUD'
 	pod 'SDWebImage', '~> 4.0'
 	pod 'Cedar'
 
