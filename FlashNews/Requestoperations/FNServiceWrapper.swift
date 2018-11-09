@@ -20,7 +20,8 @@ class FNServiceWrapper : NSObject {
     
     class func getRequestHeader() -> [String:String] {
         var requestHeader = [String:String]()
-        requestHeader["apikey"] = FNServiceURL.API_KEY
+        requestHeader["x-api-key"] = FNServiceURL.API_KEY
+        requestHeader["Authorization"] = "Bearer"
         
         return requestHeader
     }
@@ -28,17 +29,19 @@ class FNServiceWrapper : NSObject {
     
     //MARK: GET REQUEST
     
-    @discardableResult class func invokeGETRequest(wsURL:String, success:@escaping (Any) -> Void, failure:@escaping (Any) -> Void ) -> IWSRequest? {
+    @discardableResult class func invokeGETRequest(wsURL:String, parms:[String:String], success:@escaping (Any) -> Void, failure:@escaping (Any) -> Void ) -> IWSRequest? {
         if !(Reachability.isConnectedToNetwork()) {
+            FNUtility.showNetworkError()
             
             return nil
         }
+        let requestURL = FNServiceURL.URL_BASE + wsURL
         
-        return Alamofire.request(wsURL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: FNServiceWrapper.getRequestHeader()).responseJSON { (responseData:DataResponse<Any>) in
+        return Alamofire.request(requestURL, method: .get, parameters: parms, encoding: URLEncoding.default, headers: FNServiceWrapper.getRequestHeader()).responseJSON { (responseData:DataResponse<Any>) in
             if responseData.response?.statusCode == 200 {
-                success(responseData.result.value as Any)
+                success(responseData.result.value!)
             } else {
-                failure(responseData.result.value as Any)
+                failure(responseData.result.value!)
             }
         }
     }
