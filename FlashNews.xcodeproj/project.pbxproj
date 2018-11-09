@@ -13,6 +13,7 @@
 		A5FC18D52195546800CBAE33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5FC18D42195546800CBAE33 /* Assets.xcassets */; };
 		A5FC18D82195546800CBAE33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FC18D62195546800CBAE33 /* LaunchScreen.storyboard */; };
 		A5FC18E32195546800CBAE33 /* FlashNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC18E22195546800CBAE33 /* FlashNewsTests.swift */; };
+		A5FC18EF21955B9900CBAE33 /* breaking.png in Resources */ = {isa = PBXBuildFile; fileRef = A5FC18EE21955B9900CBAE33 /* breaking.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A5FC18DE2195546800CBAE33 /* FlashNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlashNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FC18E22195546800CBAE33 /* FlashNewsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashNewsTests.swift; sourceTree = "<group>"; };
 		A5FC18E42195546800CBAE33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5FC18EE21955B9900CBAE33 /* breaking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = breaking.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +79,8 @@
 		A5FC18CC2195546500CBAE33 /* FlashNews */ = {
 			isa = PBXGroup;
 			children = (
+				A5FC18ED21955B7700CBAE33 /* Splash */,
 				A5FC18CD2195546500CBAE33 /* AppDelegate.swift */,
-				A5FC18CF2195546500CBAE33 /* ViewController.swift */,
 				A5FC18D12195546500CBAE33 /* Main.storyboard */,
 				A5FC18D42195546800CBAE33 /* Assets.xcassets */,
 				A5FC18D62195546800CBAE33 /* LaunchScreen.storyboard */,
@@ -94,6 +96,15 @@
 				A5FC18E42195546800CBAE33 /* Info.plist */,
 			);
 			path = FlashNewsTests;
+			sourceTree = "<group>";
+		};
+		A5FC18ED21955B7700CBAE33 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				A5FC18EE21955B9900CBAE33 /* breaking.png */,
+				A5FC18CF2195546500CBAE33 /* ViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 			files = (
 				A5FC18D82195546800CBAE33 /* LaunchScreen.storyboard in Resources */,
 				A5FC18D52195546800CBAE33 /* Assets.xcassets in Resources */,
+				A5FC18EF21955B9900CBAE33 /* breaking.png in Resources */,
 				A5FC18D32195546500CBAE33 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 456E6NNKP2;
 				INFOPLIST_FILE = FlashNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,7 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.FlashNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -379,6 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 456E6NNKP2;
 				INFOPLIST_FILE = FlashNews/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +400,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.FlashNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

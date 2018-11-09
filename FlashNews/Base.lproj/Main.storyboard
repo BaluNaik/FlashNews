@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="FlashNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breaking.png" translatesAutoresizingMaskIntoConstraints="NO" id="iRe-qh-ROr">
+                                <rect key="frame" x="37.5" y="318.5" width="300" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Uh1-ic-uBN"/>
+                                    <constraint firstAttribute="width" constant="300" id="znf-g4-jdp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Lq-i8-upt">
+                                <rect key="frame" x="230.5" y="298.5" width="70" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.77280231736317151" blue="0.16751531241945461" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="R10-ww-2a1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="YzR-xP-HqS"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="LIVE">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmv-fq-lHW">
+                                <rect key="frame" x="128" y="368.5" width="120" height="32"/>
+                                <color key="backgroundColor" red="0.86588543653488159" green="0.86588543653488159" blue="0.86588543653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="ibc-Ow-lwR"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="NEWS">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pmv-fq-lHW" firstAttribute="width" secondItem="iRe-qh-ROr" secondAttribute="width" multiplier="0.4" id="2f6-Mm-Txa"/>
+                            <constraint firstItem="iRe-qh-ROr" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="J2C-t0-34c"/>
+                            <constraint firstItem="pmv-fq-lHW" firstAttribute="top" secondItem="iRe-qh-ROr" secondAttribute="bottom" id="SLA-5U-Vlz"/>
+                            <constraint firstItem="iRe-qh-ROr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="X21-Ja-omW"/>
+                            <constraint firstItem="pmv-fq-lHW" firstAttribute="centerX" secondItem="iRe-qh-ROr" secondAttribute="centerX" id="XaM-eb-wpd"/>
+                            <constraint firstItem="4Lq-i8-upt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="a6K-so-feJ"/>
+                            <constraint firstItem="4Lq-i8-upt" firstAttribute="trailing" secondItem="iRe-qh-ROr" secondAttribute="trailing" constant="-37" id="dzG-4P-yHi"/>
+                            <constraint firstItem="iRe-qh-ROr" firstAttribute="top" secondItem="4Lq-i8-upt" secondAttribute="bottom" constant="-1" id="xZe-sQ-EFJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="breaking.png" width="512" height="98"/>
+    </resources>
 </document>
