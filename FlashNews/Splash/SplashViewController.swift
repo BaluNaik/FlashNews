@@ -17,7 +17,7 @@ class SplashViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.setUpListScreen()
         }
     }
@@ -26,7 +26,8 @@ class SplashViewController: UIViewController {
     
     fileprivate func setUpListScreen() {
         let assesmble = FNListAssembly()
-        UIApplication.shared.keyWindow?.rootViewController = assesmble.assemblyModule()
+        let navigationController = UINavigationController(rootViewController: assesmble.assemblyModule())
+        UIApplication.shared.keyWindow?.rootViewController = navigationController
     }
 }
 

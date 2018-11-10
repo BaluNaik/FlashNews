@@ -12,10 +12,22 @@ protocol FNListPresenterInput {
     
     func feachHadLines(_ countyCode: String, _ category: String)
     func feachAllNews(_ searchText: String)
+    func getCountryCount() -> Int
+    func getCategoryCount() -> Int
+    func getCountryTitle(_ index:Int) -> String
+    func getCountryCode(_ index:Int) -> String
+    func getCategoryTitle(_ index:Int) -> String
+    func resetArticleList()
+    func getArticleCount() -> Int
+    func getArticalAtIndex(_ index: Int) -> FNArticle?
     
 }
 
 
 protocol FNListPresenterOutput: class {
+    
+    func showLoaderView(_ status: Bool)
+    func showErrorView(_ message: String)
+    func updateContent()
     
 }

@@ -23,6 +23,14 @@
 		A5819B122195C7100010AC49 /* FNBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5819B112195C7100010AC49 /* FNBaseViewController.swift */; };
 		A5819B172195D1460010AC49 /* FNListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5819B162195D1460010AC49 /* FNListViewController.swift */; };
 		A5C12CC22195E3A500FBE5E4 /* FNNetworkConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C12CC12195E3A500FBE5E4 /* FNNetworkConnector.swift */; };
+		A5CBBE62219699C900A399F2 /* FNTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CBBE61219699C900A399F2 /* FNTableCell.xib */; };
+		A5CBBE6421969A0A00A399F2 /* FNHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CBBE6321969A0A00A399F2 /* FNHeaderCell.xib */; };
+		A5CBBE6621969A5700A399F2 /* FNEverythingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CBBE6521969A5700A399F2 /* FNEverythingCell.xib */; };
+		A5CBBE6921969BFF00A399F2 /* FNEverythingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBBE6821969BFF00A399F2 /* FNEverythingCell.swift */; };
+		A5CBBE6B21969CB800A399F2 /* FNHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBBE6A21969CB800A399F2 /* FNHeaderCell.swift */; };
+		A5CBBE6D2196AB6500A399F2 /* FNTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBBE6C2196AB6500A399F2 /* FNTableCell.swift */; };
+		A5CBBE702196E23100A399F2 /* FNArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBBE6F2196E23100A399F2 /* FNArticle.swift */; };
+		A5CBBE722196E26700A399F2 /* FNArticleSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBBE712196E26700A399F2 /* FNArticleSource.swift */; };
 		A5FC18CE2195546500CBAE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC18CD2195546500CBAE33 /* AppDelegate.swift */; };
 		A5FC18D02195546500CBAE33 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FC18CF2195546500CBAE33 /* SplashViewController.swift */; };
 		A5FC18D32195546500CBAE33 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5FC18D12195546500CBAE33 /* Splash.storyboard */; };
@@ -63,6 +71,14 @@
 		A5819B112195C7100010AC49 /* FNBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNBaseViewController.swift; sourceTree = "<group>"; };
 		A5819B162195D1460010AC49 /* FNListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNListViewController.swift; sourceTree = "<group>"; };
 		A5C12CC12195E3A500FBE5E4 /* FNNetworkConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNNetworkConnector.swift; sourceTree = "<group>"; };
+		A5CBBE61219699C900A399F2 /* FNTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FNTableCell.xib; sourceTree = "<group>"; };
+		A5CBBE6321969A0A00A399F2 /* FNHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FNHeaderCell.xib; sourceTree = "<group>"; };
+		A5CBBE6521969A5700A399F2 /* FNEverythingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FNEverythingCell.xib; sourceTree = "<group>"; };
+		A5CBBE6821969BFF00A399F2 /* FNEverythingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNEverythingCell.swift; sourceTree = "<group>"; };
+		A5CBBE6A21969CB800A399F2 /* FNHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNHeaderCell.swift; sourceTree = "<group>"; };
+		A5CBBE6C2196AB6500A399F2 /* FNTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNTableCell.swift; sourceTree = "<group>"; };
+		A5CBBE6F2196E23100A399F2 /* FNArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNArticle.swift; sourceTree = "<group>"; };
+		A5CBBE712196E26700A399F2 /* FNArticleSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNArticleSource.swift; sourceTree = "<group>"; };
 		A5FC18CA2195546500CBAE33 /* FlashNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5FC18CD2195546500CBAE33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A5FC18CF2195546500CBAE33 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +119,9 @@
 			children = (
 				A5FC18D62195546800CBAE33 /* Main.storyboard */,
 				A5FC18D12195546500CBAE33 /* Splash.storyboard */,
+				A5CBBE61219699C900A399F2 /* FNTableCell.xib */,
+				A5CBBE6321969A0A00A399F2 /* FNHeaderCell.xib */,
+				A5CBBE6521969A5700A399F2 /* FNEverythingCell.xib */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -120,6 +139,7 @@
 		A5819AEF219577A00010AC49 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				A5CBBE6721969B8D00A399F2 /* UICell */,
 				A5819AFA21958B150010AC49 /* Assembly */,
 				A5819AFB21958B830010AC49 /* Presenter */,
 				A5819AFC21958BB70010AC49 /* Interactor */,
@@ -215,6 +235,25 @@
 			path = Connector;
 			sourceTree = "<group>";
 		};
+		A5CBBE6721969B8D00A399F2 /* UICell */ = {
+			isa = PBXGroup;
+			children = (
+				A5CBBE6821969BFF00A399F2 /* FNEverythingCell.swift */,
+				A5CBBE6A21969CB800A399F2 /* FNHeaderCell.swift */,
+				A5CBBE6C2196AB6500A399F2 /* FNTableCell.swift */,
+			);
+			path = UICell;
+			sourceTree = "<group>";
+		};
+		A5CBBE6E2196E10700A399F2 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A5CBBE6F2196E23100A399F2 /* FNArticle.swift */,
+				A5CBBE712196E26700A399F2 /* FNArticleSource.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
 		A5FC18C12195546500CBAE33 = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +278,7 @@
 			isa = PBXGroup;
 			children = (
 				A5FC18CD2195546500CBAE33 /* AppDelegate.swift */,
+				A5CBBE6E2196E10700A399F2 /* DataModel */,
 				A5819AEE219577960010AC49 /* Modules */,
 				A5819AF1219577EF0010AC49 /* Requestoperations */,
 				A5FC18ED21955B7700CBAE33 /* Splash */,
@@ -372,8 +412,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5CBBE6421969A0A00A399F2 /* FNHeaderCell.xib in Resources */,
 				A5FC18D82195546800CBAE33 /* Main.storyboard in Resources */,
+				A5CBBE6621969A5700A399F2 /* FNEverythingCell.xib in Resources */,
 				A5FC18D52195546800CBAE33 /* Assets.xcassets in Resources */,
+				A5CBBE62219699C900A399F2 /* FNTableCell.xib in Resources */,
 				A5FC18EF21955B9900CBAE33 /* breaking.png in Resources */,
 				A5FC18D32195546500CBAE33 /* Splash.storyboard in Resources */,
 			);
@@ -416,15 +459,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-FlashNews/Pods-FlashNews-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cedar/Cedar.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cedar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -457,15 +504,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5819B0D2195923C0010AC49 /* FNUtility.swift in Sources */,
+				A5CBBE702196E23100A399F2 /* FNArticle.swift in Sources */,
 				A5819B102195C2C60010AC49 /* FNAssemblyProtocol.swift in Sources */,
 				A5819B0B219592030010AC49 /* FNListRouterIO.swift in Sources */,
 				A5819AF521957C7F0010AC49 /* FNServiceWrapper.swift in Sources */,
 				A5819B172195D1460010AC49 /* FNListViewController.swift in Sources */,
 				A5819AFF219591430010AC49 /* FNListAssembly.swift in Sources */,
+				A5CBBE722196E26700A399F2 /* FNArticleSource.swift in Sources */,
 				A5819B05219591970010AC49 /* FNListInteractor.swift in Sources */,
 				A5C12CC22195E3A500FBE5E4 /* FNNetworkConnector.swift in Sources */,
+				A5CBBE6D2196AB6500A399F2 /* FNTableCell.swift in Sources */,
 				A5819B09219591ED0010AC49 /* FNListRouter.swift in Sources */,
 				A5819B032195916A0010AC49 /* FNListPresenterIO.swift in Sources */,
+				A5CBBE6921969BFF00A399F2 /* FNEverythingCell.swift in Sources */,
 				A5819B07219591A30010AC49 /* FNListInteractorIO.swift in Sources */,
 				A5819B122195C7100010AC49 /* FNBaseViewController.swift in Sources */,
 				A5819AF9219585A70010AC49 /* NetworkCheck.swift in Sources */,
@@ -473,6 +524,7 @@
 				A5FC18CE2195546500CBAE33 /* AppDelegate.swift in Sources */,
 				A5819AF32195782D0010AC49 /* FNServiceURL.swift in Sources */,
 				A5819B012195915C0010AC49 /* FNListPresenter.swift in Sources */,
+				A5CBBE6B21969CB800A399F2 /* FNHeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

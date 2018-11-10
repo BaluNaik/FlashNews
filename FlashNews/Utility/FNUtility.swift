@@ -16,4 +16,19 @@ class FNUtility {
         UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil)
     }
     
+    static func ConvertDateFormater(comingDate: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        
+        guard let formatteddate = dateFormatter.date(from: comingDate) else {
+            assert(false, "no date from string")
+            
+            return comingDate
+        }
+        dateFormatter.dateFormat = "dd MMM yyyy hh:mm a"
+        let timeStamp = dateFormatter.string(from: formatteddate)
+        
+        return timeStamp
+    }
+    
 }

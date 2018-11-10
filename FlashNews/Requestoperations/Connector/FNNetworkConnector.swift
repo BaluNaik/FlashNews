@@ -10,8 +10,8 @@ import UIKit
 
 class FNNetworkConnector: NSObject {
     
-    func performHeadLineRequestForCountryCode(_ countryCode: String,_ category: String, success successBlock: @escaping ((Any) -> Void), failure failureBlock: @escaping ((Any) -> Void)) {
-        let requestPrameters: [String:String] = ["country": countryCode, "category":category, "language":"en"]
+    func performHeadLineRequestForCountryCode(_ countryCode: String, _ category: String, success successBlock: @escaping ((Any) -> Void), failure failureBlock: @escaping ((Any) -> Void)) {
+        let requestPrameters: [String: Any] = ["country": countryCode, "category":category, "language":"en","pageSize":100]
         FNServiceWrapper.invokeGETRequest(wsURL: FNServiceURL.URL_HEADLINES, parms: requestPrameters, success: { (response) in
             successBlock(response)
         }) { (respnse) in
@@ -20,7 +20,7 @@ class FNNetworkConnector: NSObject {
     }
     
     func performNewsRequestForAll(_ searchText: String, success successBlock: @escaping ((Any) -> Void), failure failureBlock: @escaping ((Any) -> Void)) {
-        let requestPrameters: [String:String] = ["q": searchText, "language":"en"]
+        let requestPrameters: [String: String] = ["q": searchText, "language":"en"]
         FNServiceWrapper.invokeGETRequest(wsURL: FNServiceURL.URL_EVERYTHING, parms: requestPrameters, success: { (response) in
             successBlock(response)
         }) { (respnse) in

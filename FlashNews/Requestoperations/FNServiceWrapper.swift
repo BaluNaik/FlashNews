@@ -29,7 +29,7 @@ class FNServiceWrapper : NSObject {
     
     //MARK: GET REQUEST
     
-    @discardableResult class func invokeGETRequest(wsURL:String, parms:[String:String], success:@escaping (Any) -> Void, failure:@escaping (Any) -> Void ) -> IWSRequest? {
+    @discardableResult class func invokeGETRequest(wsURL:String, parms:[String: Any], success:@escaping (Any) -> Void, failure:@escaping (Any) -> Void ) -> IWSRequest? {
         if !(Reachability.isConnectedToNetwork()) {
             FNUtility.showNetworkError()
             

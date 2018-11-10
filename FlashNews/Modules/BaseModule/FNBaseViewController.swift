@@ -28,6 +28,12 @@ class FNBaseViewController: UIViewController {
         self.navigationController?.dismiss(animated: animated, completion: nil)
     }
     
+    func showError(_ message: String) {
+        let alertController = UIAlertController(title: "FlashNews", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @objc func goBack() {
         self.dismissViewController(true)
     }
