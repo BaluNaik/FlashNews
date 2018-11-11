@@ -381,9 +381,11 @@
 				TargetAttributes = {
 					A5FC18C92195546500CBAE33 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 					};
 					A5FC18DD2195546800CBAE33 = {
 						CreatedOnToolsVersion = 9.4;
+						LastSwiftMigration = 1010;
 						TestTargetID = A5FC18C92195546500CBAE33;
 					};
 				};
@@ -695,7 +697,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.FlashNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -715,7 +717,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.FlashNews;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -736,7 +738,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.FlashNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlashNews.app/FlashNews";
 			};
@@ -758,7 +760,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = MyCompany.FlashNewsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlashNews.app/FlashNews";
 			};

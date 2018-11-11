@@ -46,7 +46,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
     
     @IBAction func actionNewsTypeChanged(_ sender: Any) {
         self.presenter.resetArticleList()
-        if self.selectedPickerType == pickerType.country {
+        if self.segmentNewsType.selectedSegmentIndex == 0 {
             self.getHeadLines()
         } else {
             self.getAllNews()
@@ -58,6 +58,8 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
     }
     
     @IBAction func actionOnBarDone(_ sender: Any) {
+        self.headerCell.updatesCountry(self.selectedCountryCode, self.selectedCountry)
+        self.headerCell.updatesCategory(self.selectedCategory)
         self.showHidePickerView(true)
         self.getHeadLines()
     }
@@ -112,7 +114,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             if segmentNewsType.selectedSegmentIndex == 0 {
-                self.headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as! FNHeaderCell
+                self.headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? FNHeaderCell
                 self.headerCell.delegate = self
                 
                 return self.headerCell
@@ -125,6 +127,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
             
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FNTableCell
+            cell.setUpDefaultSate()
             if let obj = self.presenter.getArticalAtIndex(indexPath.section - 1) {
                 cell.setArticle(obj)
             }
@@ -139,7 +142,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
             return 50.0
         } else {
             
-            return 90.0
+            return 130.0
         }
     }
     

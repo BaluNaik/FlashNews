@@ -16,7 +16,7 @@ class FNTableCell: UITableViewCell {
     @IBOutlet weak var lblAuthor: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        FNUtility.applyShadowToView(self.contentView)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

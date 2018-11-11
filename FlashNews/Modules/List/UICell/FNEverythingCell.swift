@@ -19,6 +19,7 @@ class FNEverythingCell: UITableViewCell, UISearchBarDelegate {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        searchBar.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,7 +27,11 @@ class FNEverythingCell: UITableViewCell, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        self.delegate.featchSearchTextNews(searchBar.text!)
+        searchBar.resignFirstResponder()
+        if let _ = searchBar.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) {
+            self.delegate.featchSearchTextNews(searchBar.text!)
+            searchBar.text = ""
+        }
     }
 
 }

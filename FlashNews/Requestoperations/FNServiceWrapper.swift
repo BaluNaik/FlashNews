@@ -50,6 +50,7 @@ class FNServiceWrapper : NSObject {
 extension Request : IWSRequest {
     
     internal var progress: Progress {
+        
         return self.progress
     }
     
