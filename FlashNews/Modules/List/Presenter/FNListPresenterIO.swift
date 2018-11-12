@@ -20,7 +20,7 @@ protocol FNListPresenterInput {
     func resetArticleList()
     func getArticleCount() -> Int
     func getArticalAtIndex(_ index: Int) -> FNArticle?
-    
+    func showDetailArticle(_ index:Int)
 }
 
 

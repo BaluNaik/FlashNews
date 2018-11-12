@@ -12,6 +12,7 @@ class FNListPresenter: NSObject, FNListPresenterInput, FNListInteractorOutput {
     
     weak var userInterface: FNListPresenterOutput?
     var interactor: FNListInteractorInput?
+    var Router: FNListRouter?
     
     
     //MARK: FNListPresenterInput Methods
@@ -63,6 +64,12 @@ class FNListPresenter: NSObject, FNListPresenterInput, FNListInteractorOutput {
     func getArticalAtIndex(_ index: Int) -> FNArticle? {
         
         return self.interactor!.getArticalAtIndex(index)
+    }
+    
+    func showDetailArticle(_ index: Int) {
+        if let article = self.interactor?.getArticalAtIndex(index) {
+            self.Router?.showDetailArticle(article)
+        }
     }
     
     

@@ -106,4 +106,3 @@ class FNListInteractor: NSObject, FNListInteractorInput {
         return self.articleList[index]
     }
 }
-

@@ -20,12 +20,12 @@ class FNBaseViewController: UIViewController {
         
     }
     
-    func pushViewController(_ animated: Bool) {
-        self.navigationController?.pushViewController(self, animated: animated)
+    func pushViewController(_ controller: UIViewController, _ animated: Bool ) {
+        self.navigationController?.pushViewController(controller, animated: animated)
     }
     
     func dismissViewController(_ animated: Bool) {
-        self.navigationController?.dismiss(animated: animated, completion: nil)
+        self.navigationController?.popViewController(animated: animated)
     }
     
     func showError(_ message: String) {

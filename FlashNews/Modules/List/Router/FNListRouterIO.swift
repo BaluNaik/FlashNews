@@ -10,4 +10,6 @@ import UIKit
 
 protocol FNListRouterInput {
     
+    func showDetailArticle(_ article: FNArticle)
+    
 }

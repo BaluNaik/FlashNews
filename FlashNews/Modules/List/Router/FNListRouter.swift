@@ -10,4 +10,11 @@ import UIKit
 
 class FNListRouter: NSObject, FNListRouterInput  {
     
+    var transitionHandler: FNBaseViewController?
+    
+    func showDetailArticle(_ article: FNArticle) {
+        let detailAssembly = FNDetailsAssembly()
+        detailAssembly.input = article
+        self.transitionHandler?.pushViewController(detailAssembly.assemblyModule(), true)
+    }
 }

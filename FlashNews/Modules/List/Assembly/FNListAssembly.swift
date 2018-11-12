@@ -27,18 +27,26 @@ class FNListAssembly: NSObject, FNAssemblyProtocol {
         return viewController!
     }
     
-    fileprivate func presenterModuleWithVC(controller:FNListViewController) -> FNListPresenter {
+    fileprivate func presenterModuleWithVC(controller: FNListViewController) -> FNListPresenter {
         let presenter = FNListPresenter()
         presenter.userInterface = controller
         presenter.interactor = self.interactorModuleWithPresenter(presenter: presenter)
+        presenter.Router = self.RouterModuleWithController(controller: controller)
         
         return presenter
     }
     
-    fileprivate func interactorModuleWithPresenter(presenter:FNListPresenter) -> FNListInteractor {
+    fileprivate func interactorModuleWithPresenter(presenter: FNListPresenter) -> FNListInteractor {
         let interactor = FNListInteractor()
         interactor.presenter = presenter
         
         return interactor
+    }
+    
+    fileprivate func RouterModuleWithController(controller: FNListViewController) -> FNListRouter {
+        let router = FNListRouter()
+        router.transitionHandler = controller
+        
+        return router
     }
 }

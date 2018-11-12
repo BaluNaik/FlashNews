@@ -21,7 +21,15 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
     var selectedCountryCode = "us"
     var selectedCategory = "general"
     var searchText = "bitcoin"
+    var isRefreshInProgress = false
     
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(self.handleRefresh(_:)), for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.red
+        
+        return refreshControl
+    }()
     
     @IBOutlet weak var tbleView: UITableView!
     @IBOutlet weak var segmentNewsType: UISegmentedControl!
@@ -35,6 +43,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
         tbleView.register(UINib(nibName: "FNTableCell", bundle: nil), forCellReuseIdentifier: "Cell")
         self.tbleView.backgroundView = nil
         self.tbleView.backgroundColor = UIColor.clear
+        //self.tbleView.addSubview(self.refreshControl)
         self.viewForPicker.isHidden = true
     }
     
@@ -64,10 +73,23 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
         self.getHeadLines()
     }
     
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        if isRefreshInProgress {
+            
+            return
+        }
+        isRefreshInProgress = true
+        self.actionNewsTypeChanged(self)
+    }
+    
     
     //MARK: FNListPresenterOutput
     
     func showLoaderView(_ status: Bool) {
+        if refreshControl.isRefreshing {
+            
+            return
+        }
         self.showLoader(status)
     }
     
@@ -98,7 +120,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
-        return self.presenter.getArticleCount() + 1
+        return 2 //self.presenter.getArticleCount() + 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,7 +129,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
             return 1
         } else {
             
-            return self.presenter.getArticleCount() == 0 ? 0 : 1;
+            return self.presenter.getArticleCount() // == 0 ? 0 : 1;
         }
     }
     
@@ -128,7 +150,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! FNTableCell
             cell.setUpDefaultSate()
-            if let obj = self.presenter.getArticalAtIndex(indexPath.section - 1) {
+            if let obj = self.presenter.getArticalAtIndex(indexPath.row) {
                 cell.setArticle(obj)
             }
             
@@ -158,6 +180,10 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
         return headerView
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.presenter.showDetailArticle(indexPath.row)
+    }
+    
     
     //MARK: FNHeaderCellDelegate
     
@@ -172,6 +198,10 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
     }
     
     func updateContent() {
+        if self.refreshControl.isRefreshing {
+            isRefreshInProgress = false
+            refreshControl.endRefreshing()
+        }
         self.tbleView.reloadData()
     }
     
