@@ -35,6 +35,7 @@ class FNDetailsViewController: FNBaseViewController {
     
     func setUpUI() {
         if let url = article?.urlToImage {
+            imageView.sd_setShowActivityIndicatorView(true)
             imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "picture"))
         }
         lblArticleTitle.text = article?.title

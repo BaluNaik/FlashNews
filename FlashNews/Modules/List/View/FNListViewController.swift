@@ -43,7 +43,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
         tbleView.register(UINib(nibName: "FNTableCell", bundle: nil), forCellReuseIdentifier: "Cell")
         self.tbleView.backgroundView = nil
         self.tbleView.backgroundColor = UIColor.clear
-        //self.tbleView.addSubview(self.refreshControl)
+        self.tbleView.addSubview(self.refreshControl)
         self.viewForPicker.isHidden = true
     }
     
@@ -79,7 +79,13 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
             return
         }
         isRefreshInProgress = true
-        self.actionNewsTypeChanged(self)
+        self.presenter.resetArticleList()
+        self.tbleView.reloadData()
+        if self.segmentNewsType.selectedSegmentIndex == 0 {
+            self.getHeadLines()
+        } else {
+            self.getAllNews()
+        }
     }
     
     
