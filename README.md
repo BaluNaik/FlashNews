@@ -7,40 +7,47 @@ This repository contains a detailed sample app that implements VIPER architectur
   <img src="https://github.com/BaluNaik/FlashNews/blob/master/Detail%20Screen.png" width="250">
 </p>
 <br>
-<br>
-
 <p align="center">
   <img src="https://github.com/BaluNaik/FlashNews/blob/master/No%20Internet.png" width="250">
   <img src="https://github.com/BaluNaik/FlashNews/blob/master/Gif.gif" width="250">
 </p>
 <br>
-<br>
 
 # VIPER Architecture Blueprint
 
+<p align="center">
+  <img src="https://github.com/BaluNaik/FlashNews/blob/master/Viper.png">
+</p>
 
 # Project Structure
+<p align="center">
+  <img src="https://github.com/BaluNaik/FlashNews/blob/master/Structure.png">
+</p>
 
-## Just fork/clone, build and run
+### Setting up the project 
+* Just fork or clone, build and run
 ```sh
 git clone https://github.com/BaluNaik/FlashNews.git
 cd FlashNews
 pod install
 open FlashNews.xcworkspace
 ```
+## Used Frameworks
 #### Alamofire
 Swift-based HTTP networking library helps for network calls.
+
 #### SwiftyJSON
 SwiftyJSON library makes it easy to deal with JSON data in Swift.
+
 #### ObjectMapper
 ObjectMapper library written in Swift that makes it easy for you to convert your model objects (classes and structs) to and from JSON.
+
 #### SDWebImage
 Asynchronous image downloader with cache support as a UIImageView category.
+
 #### SVProgressHUD
 Lightweight progress indicator for iOS apps.
 
-#### Foursquare
-Foursquare is a local search-and-discovery service helps you find the perfect places to go with friends. Discover the best food, nightlife, and entertainment in your area.
 
 ## Requirements
 * iOS 10.0 or later

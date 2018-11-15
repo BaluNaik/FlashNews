@@ -24,8 +24,23 @@ class FNDetailsAssembly: NSObject, FNAssemblyProtocol {
     fileprivate func viewControllerForList() -> FNDetailsViewController {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: "FNDetailsViewController") as? FNDetailsViewController
-        viewController?.article = self.input
         
         return viewController!
+    }
+    
+    fileprivate func presenterModuleWithVC(controller: FNDetailsViewController) -> FNDetailsPresenter {
+        let presenter = FNDetailsPresenter()
+        presenter.userInterface = controller
+        presenter.interactor = self.interactorModuleWithPresenter(presenter: presenter)
+        
+        return presenter
+    }
+    
+    fileprivate func interactorModuleWithPresenter(presenter: FNDetailsPresenter) -> FNDetailsInteractor {
+        let interactor = FNDetailsInteractor()
+        interactor.presenter = presenter
+        interactor.article = self.input
+        
+        return interactor
     }
 }

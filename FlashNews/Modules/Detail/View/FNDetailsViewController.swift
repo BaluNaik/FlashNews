@@ -9,10 +9,9 @@
 import UIKit
 import SDWebImage
 
-class FNDetailsViewController: FNBaseViewController {
+class FNDetailsViewController: FNBaseViewController, FNDetailsPresenterOutput {
     
-    var article: FNArticle?
-    
+    var presenter : FNDetailsPresenterInput!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var lblArticleTitle: UILabel!
     @IBOutlet weak var lblAuthor: UILabel!
@@ -34,24 +33,24 @@ class FNDetailsViewController: FNBaseViewController {
     }
     
     func setUpUI() {
-        if let url = article?.urlToImage {
+        if let url = presenter.getImageUrl() {
             imageView.sd_setShowActivityIndicatorView(true)
             imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "picture"))
         }
-        lblArticleTitle.text = article?.title
-        lblAuthor.text = article?.author
-        if let date = article?.publishedAt {
+        lblArticleTitle.text = presenter.getArticleTitle()
+        lblAuthor.text = presenter.getArticleAuthor()
+        if let date = presenter.getPublishedDate() {
             lblDate.text = FNUtility.ConvertDateFormater(comingDate: date)
         }
-        self.textViewContent.text = article?.content
+        self.textViewContent.text = presenter.getArticleContent()
         
         let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
-        let underlineAttributedString = NSAttributedString(string: article?.url ?? "", attributes: underlineAttribute)
+        let underlineAttributedString = NSAttributedString(string: presenter.getArticleUrl() ?? "", attributes: underlineAttribute)
         self.lblUrl.attributedText = underlineAttributedString
     }
     
     @objc fileprivate func openLink() {
-        if let url = URL(string: article?.url ?? "" ) {
+        if let url = URL(string: presenter.getArticleUrl() ?? "" ) {
             UIApplication.shared.open(url, options: [:])
         }
     }

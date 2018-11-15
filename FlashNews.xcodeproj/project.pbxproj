@@ -10,6 +10,10 @@
 		6ECD7940BF28FDA5994B97E9 /* Pods_FlashNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC8F4AE816B98034AA5F18E /* Pods_FlashNews.framework */; };
 		A55083C0219A10D60047193E /* FNDetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55083BF219A10D60047193E /* FNDetailsAssembly.swift */; };
 		A55083C2219A11060047193E /* FNDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55083C1219A11060047193E /* FNDetailsViewController.swift */; };
+		A5786446219DF756007E923E /* FNDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5786445219DF756007E923E /* FNDetailsInteractor.swift */; };
+		A5786448219DF768007E923E /* FNDetailsInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5786447219DF768007E923E /* FNDetailsInteractorIO.swift */; };
+		A578644A219DF78C007E923E /* FNDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5786449219DF78C007E923E /* FNDetailsPresenter.swift */; };
+		A578644C219DF79B007E923E /* FNDetailsPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578644B219DF79B007E923E /* FNDetailsPresenterIO.swift */; };
 		A5819AF32195782D0010AC49 /* FNServiceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5819AF22195782D0010AC49 /* FNServiceURL.swift */; };
 		A5819AF521957C7F0010AC49 /* FNServiceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5819AF421957C7F0010AC49 /* FNServiceWrapper.swift */; };
 		A5819AF9219585A70010AC49 /* NetworkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5819AF8219585A70010AC49 /* NetworkCheck.swift */; };
@@ -60,6 +64,10 @@
 		9AC8F4AE816B98034AA5F18E /* Pods_FlashNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlashNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55083BF219A10D60047193E /* FNDetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNDetailsAssembly.swift; sourceTree = "<group>"; };
 		A55083C1219A11060047193E /* FNDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNDetailsViewController.swift; sourceTree = "<group>"; };
+		A5786445219DF756007E923E /* FNDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNDetailsInteractor.swift; sourceTree = "<group>"; };
+		A5786447219DF768007E923E /* FNDetailsInteractorIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNDetailsInteractorIO.swift; sourceTree = "<group>"; };
+		A5786449219DF78C007E923E /* FNDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNDetailsPresenter.swift; sourceTree = "<group>"; };
+		A578644B219DF79B007E923E /* FNDetailsPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNDetailsPresenterIO.swift; sourceTree = "<group>"; };
 		A5819AF22195782D0010AC49 /* FNServiceURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNServiceURL.swift; sourceTree = "<group>"; };
 		A5819AF421957C7F0010AC49 /* FNServiceWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNServiceWrapper.swift; sourceTree = "<group>"; };
 		A5819AF8219585A70010AC49 /* NetworkCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCheck.swift; sourceTree = "<group>"; };
@@ -134,6 +142,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A5786442219DF6DB007E923E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A5786449219DF78C007E923E /* FNDetailsPresenter.swift */,
+				A578644B219DF79B007E923E /* FNDetailsPresenterIO.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A5786443219DF6DF007E923E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A5786444219DF6EA007E923E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A5786445219DF756007E923E /* FNDetailsInteractor.swift */,
+				A5786447219DF768007E923E /* FNDetailsInteractorIO.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		A5819AED219577270010AC49 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +182,7 @@
 		A5819AEE219577960010AC49 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A5CBBE6E2196E10700A399F2 /* DataModel */,
 				A5819B0E2195C29D0010AC49 /* BaseModule */,
 				A5819AEF219577A00010AC49 /* List */,
 				A5819AF0219577B20010AC49 /* Detail */,
@@ -172,8 +206,11 @@
 		A5819AF0219577B20010AC49 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				A55083BE219A109E0047193E /* View */,
 				A55083BD219A10550047193E /* Assembly */,
+				A5786444219DF6EA007E923E /* Interactor */,
+				A5786442219DF6DB007E923E /* Presenter */,
+				A5786443219DF6DF007E923E /* Router */,
+				A55083BE219A109E0047193E /* View */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -300,7 +337,6 @@
 			isa = PBXGroup;
 			children = (
 				A5FC18CD2195546500CBAE33 /* AppDelegate.swift */,
-				A5CBBE6E2196E10700A399F2 /* DataModel */,
 				A5819AEE219577960010AC49 /* Modules */,
 				A5819AF1219577EF0010AC49 /* Requestoperations */,
 				A5FC18ED21955B7700CBAE33 /* Splash */,
@@ -530,11 +566,13 @@
 				A5819B102195C2C60010AC49 /* FNAssemblyProtocol.swift in Sources */,
 				A5819B0B219592030010AC49 /* FNListRouterIO.swift in Sources */,
 				A5819AF521957C7F0010AC49 /* FNServiceWrapper.swift in Sources */,
+				A578644A219DF78C007E923E /* FNDetailsPresenter.swift in Sources */,
 				A5819B172195D1460010AC49 /* FNListViewController.swift in Sources */,
 				A5819AFF219591430010AC49 /* FNListAssembly.swift in Sources */,
 				A5CBBE722196E26700A399F2 /* FNArticleSource.swift in Sources */,
 				A5819B05219591970010AC49 /* FNListInteractor.swift in Sources */,
 				A5C12CC22195E3A500FBE5E4 /* FNNetworkConnector.swift in Sources */,
+				A578644C219DF79B007E923E /* FNDetailsPresenterIO.swift in Sources */,
 				A5CBBE6D2196AB6500A399F2 /* FNTableCell.swift in Sources */,
 				A5819B09219591ED0010AC49 /* FNListRouter.swift in Sources */,
 				A5819B032195916A0010AC49 /* FNListPresenterIO.swift in Sources */,
@@ -542,9 +580,11 @@
 				A5819B07219591A30010AC49 /* FNListInteractorIO.swift in Sources */,
 				A5819B122195C7100010AC49 /* FNBaseViewController.swift in Sources */,
 				A55083C0219A10D60047193E /* FNDetailsAssembly.swift in Sources */,
+				A5786446219DF756007E923E /* FNDetailsInteractor.swift in Sources */,
 				A55083C2219A11060047193E /* FNDetailsViewController.swift in Sources */,
 				A5819AF9219585A70010AC49 /* NetworkCheck.swift in Sources */,
 				A5FC18D02195546500CBAE33 /* SplashViewController.swift in Sources */,
+				A5786448219DF768007E923E /* FNDetailsInteractorIO.swift in Sources */,
 				A5FC18CE2195546500CBAE33 /* AppDelegate.swift in Sources */,
 				A5819AF32195782D0010AC49 /* FNServiceURL.swift in Sources */,
 				A5819B012195915C0010AC49 /* FNListPresenter.swift in Sources */,
