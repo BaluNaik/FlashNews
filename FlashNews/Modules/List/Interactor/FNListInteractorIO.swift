@@ -10,7 +10,7 @@ import UIKit
 
 protocol FNListInteractorInput {
     
-    func feachHadLines(_ countyCode: String, _ category: String)
+    func feachHeadLines(_ countyCode: String, _ category: String)
     func feachAllNews(_ searchText: String)
     func getCountryCount() -> Int
     func getCategoryCount() -> Int

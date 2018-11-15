@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class FNUtility {
     
     class func showNetworkError() {
+        SVProgressHUD.dismiss()
         let alertController = UIAlertController(title: "FlashNews", message: "Opps!!. It seems that you are offline.Check your network or wifi connection", preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         UIApplication.shared.keyWindow?.rootViewController?.present(alertController, animated: true, completion: nil)

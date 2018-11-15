@@ -9,7 +9,6 @@ target 'FlashNews' do
 	pod 'Alamofire', '~> 4.7'
 	pod 'SVProgressHUD'
 	pod 'SDWebImage', '~> 4.0'
-	pod 'Cedar'
     pod 'ObjectMapper'
     pod 'SwiftyJSON'
 

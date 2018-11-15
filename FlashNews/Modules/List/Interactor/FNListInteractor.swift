@@ -37,7 +37,7 @@ class FNListInteractor: NSObject, FNListInteractorInput {
     
     //MARK: - FNListInteractorInput methods
     
-    func feachHadLines(_ countyCode: String, _ category: String) {
+    func feachHeadLines(_ countyCode: String, _ category: String) {
         self.connector.performHeadLineRequestForCountryCode(countyCode,category, success: { (response) in
             let sJSONObj = JSON(response)
             if let list = Mapper<FNArticle>().mapArray(JSONObject:sJSONObj.dictionaryObject?["articles"]!) {

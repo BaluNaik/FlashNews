@@ -17,9 +17,9 @@ class FNListPresenter: NSObject, FNListPresenterInput, FNListInteractorOutput {
     
     //MARK: FNListPresenterInput Methods
     
-    func feachHadLines(_ countyCode: String, _ category: String) {
+    func feachHeadLines(_ countyCode: String, _ category: String) {
         self.userInterface?.showLoaderView(true)
-        self.interactor?.feachHadLines(countyCode, category)
+        self.interactor?.feachHeadLines(countyCode, category)
     }
     
     func feachAllNews(_ searchText: String) {

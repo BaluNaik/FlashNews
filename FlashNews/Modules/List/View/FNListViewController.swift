@@ -50,7 +50,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = "NEWS"
-        self.presenter.feachHadLines(self.selectedCountryCode, self.selectedCategory)
+        self.presenter.feachHeadLines(self.selectedCountryCode, self.selectedCategory)
     }
     
     @IBAction func actionNewsTypeChanged(_ sender: Any) {
@@ -107,7 +107,7 @@ class FNListViewController: FNBaseViewController, FNListPresenterOutput, UITable
     //MARK: Private Methods
     
     fileprivate func getHeadLines() {
-        self.presenter.feachHadLines(self.selectedCountryCode, self.selectedCategory)
+        self.presenter.feachHeadLines(self.selectedCountryCode, self.selectedCategory)
     }
     
     fileprivate func getAllNews() {
